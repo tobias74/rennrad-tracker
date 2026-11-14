@@ -77,3 +77,7 @@ rad.example.org {
 Setze `TRACKER_OWNER_KEY` auf einen eigenen zufälligen Schlüssel und `TRACKER_DATA` auf einen dauerhaften, privaten Ordner. `TRACKER_BIND` ist standardmäßig `127.0.0.1:8787`. Setze die HTTPS-Domain beim Android-Build mit `-PtrackerServerUrl=https://rad.example.org`. Zugriff auf die Karte hat jede Person mit dem Familienlink. Vermeide es, URLs mit diesem Link in Proxy-Zugriffsprotokollen zu speichern. Die Basiskarte lädt ihre Kacheln direkt von OpenStreetMap und zeigt deren Namensnennung an. Siehe [Kachelnutzungsrichtlinie](https://operations.osmfoundation.org/policies/tiles/).
 
 `family.json` enthält den Link. `devices.json` enthält die Gerätenamen und Prüfsummen der Geräteschlüssel. Je Fahrt gibt es eine NDJSON-Datei mit einer Zeile pro bestätigtem Upload. Sichere den Datenordner, um Link, Geräte und Fahrten zu behalten. Die Fahrdateien bleiben gespeichert, bis sie im Datenordner gelöscht werden. Änderungen an den Dateien bei gestopptem Dienst vornehmen.
+
+## Lizenz
+
+Der eigene Quellcode steht unter der [MIT-Lizenz](LICENSE). Für eingebundene Drittkomponenten gelten deren jeweilige Lizenzen. Die übernommenen Impressums- und Datenschutztexte in `server/web/legal/` sind von der MIT-Lizenz ausgenommen.
