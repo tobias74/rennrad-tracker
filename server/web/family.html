@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#15251f">
+  <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="mapTitle">Live-Karte · Rennrad-Tracker</title>
+  <link rel="stylesheet" href="/leaflet.css">
+  <link rel="stylesheet" href="/style.css?v=3">
+  <script src="/leaflet.js" defer></script>
+  <script src="/i18n.js" defer></script>
+  <script src="/app-v3.js" defer></script>
+</head>
+<body class="tracker">
+  <header class="top">
+    <div class="top-inner">
+      <a class="site-brand" href="/" data-home>Rennrad-Tracker</a>
+      <div class="top-tools">
+        <p id="status" class="status" data-state="waiting" role="status">Verbindet …</p>
+        <nav class="languages" aria-label="Sprache" data-label="language">
+          <button type="button" lang="de" data-select-language="de" aria-pressed="true">DE</button>
+          <button type="button" lang="en" data-select-language="en" aria-pressed="false">EN</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main id="dashboard">
+    <nav id="ride-picker" class="ride-picker" aria-label="Fahrten" data-label="rides" hidden>
+      <button id="all-rides" type="button" aria-pressed="true" data-i18n="allRides">Alle Fahrten</button>
+      <div id="ride-choices" class="ride-choices"></div>
+    </nav>
+    <section class="map-section" aria-label="Karte der Fahrten" data-label="map">
+      <div id="map" aria-label="Standort und gefahrene Strecke" data-label="location" aria-hidden="true"></div>
+      <div id="empty" class="map-empty">
+        <h1 id="empty-title">Verbindet …</h1>
+        <p id="empty-description">Die Fahrt wird geladen.</p>
+      </div>
+      <div id="map-actions" class="map-actions" hidden>
+        <button type="button" id="follow" aria-pressed="true" data-i18n="follow">Zum Fahrer</button>
+        <button type="button" id="fit">Ganze Strecke</button>
+      </div>
+    </section>
+    <section id="telemetry" class="telemetry" aria-label="Fahrtdaten" data-label="telemetry">
+      <dl class="quick-stats">
+        <div><dt data-i18n="speed">Tempo</dt><dd id="speed">–</dd></div>
+        <div><dt data-i18n="battery">Akku</dt><dd id="battery">–</dd></div>
+        <div><dt data-i18n="age">Standort</dt><dd id="age">–</dd></div>
+      </dl>
+      <details class="ride-details">
+        <summary data-i18n="details">Fahrtdetails</summary>
+        <dl class="extra-stats">
+          <div><dt data-i18n="distance">Distanz</dt><dd id="distance">–</dd></div>
+          <div><dt data-i18n="duration">Dauer</dt><dd id="duration">–</dd></div>
+          <div><dt data-i18n="altitude">Höhe</dt><dd id="altitude">–</dd></div>
+          <div><dt data-i18n="accuracy">GPS-Genauigkeit</dt><dd id="accuracy">–</dd></div>
+          <div><dt data-i18n="bearing">Fahrtrichtung</dt><dd id="bearing">–</dd></div>
+          <div><dt data-i18n="timestamp">Letzter Messpunkt</dt><dd id="timestamp">–</dd></div>
+        </dl>
+      </details>
+    </section>
+    <footer class="map-footer" aria-label="Rechtliches" data-label="legal">
+      <a href="/impressum" data-legal-page="imprint" data-i18n="imprint">Impressum</a>
+      <a href="/datenschutz" data-legal-page="privacy" data-i18n="privacy">Datenschutz</a>
+    </footer>
+  </main>
+</body>
+</html>

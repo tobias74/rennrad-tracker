@@ -1,0 +1,11 @@
+{
+  "name": "rennrad-tracker-web-tests",
+  "private": true,
+  "scripts": {
+    "pretest:e2e": "cargo build --locked --manifest-path server/Cargo.toml --target-dir server/target",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1"
+  }
+}

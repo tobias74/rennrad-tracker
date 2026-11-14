@@ -1,0 +1,39 @@
+services:
+  tracker:
+    build: .
+    image: rennrad-tracker:local
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    env_file: tracker.env
+    environment:
+      TRACKER_BIND: 0.0.0.0:8787
+      TRACKER_DATA: /data
+      TOKIO_WORKER_THREADS: '2'
+    volumes:
+      - rides:/data
+    networks: [public]
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, 'http://127.0.0.1:8787/health']
+      interval: 15s
+      timeout: 3s
+      retries: 3
+    labels:
+      traefik.enable: 'true'
+      traefik.docker.network: bike-router-public
+      traefik.http.routers.biketracking.rule: Host(`biketracking.tobiga.com`)
+      traefik.http.routers.biketracking.entrypoints: websecure
+      traefik.http.routers.biketracking.tls.certresolver: letsencrypt
+      traefik.http.routers.biketracking.observability.accesslogs: 'false'
+      traefik.http.services.biketracking.loadbalancer.server.port: '8787'
+      traefik.http.middlewares.biketracking-https.headers.stsseconds: '31536000'
+      traefik.http.routers.biketracking.middlewares: biketracking-https
+
+volumes:
+  rides:
+
+networks:
+  public:
+    external: true
+    name: bike-router-public

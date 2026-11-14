@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{language}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}} · Rennrad-Tracker</title>
+  <link rel="stylesheet" href="/style.css?v=3">
+</head>
+<body>
+  <header class="site-head site-width">
+    <a class="site-brand" href="/?lang={{language}}"><span class="brand-mark" aria-hidden="true"></span>Rennrad-Tracker</a>
+    <nav class="languages" aria-label="{{language_label}}">
+      <a href="{{german_path}}" hreflang="de" lang="de"{{german_current}}>DE</a>
+      <a href="{{english_path}}" hreflang="en" lang="en"{{english_current}}>EN</a>
+    </nav>
+  </header>
+  <main class="site-width">
+    <article class="legal-page">
+      <h1>{{title}}</h1>
+      <div class="legal-copy">{{content}}</div>
+    </article>
+  </main>
+</body>
+</html>

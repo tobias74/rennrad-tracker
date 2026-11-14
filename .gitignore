@@ -1,0 +1,13 @@
+/server/target/
+/server/data/
+/server/tracker.env
+/android/.gradle/
+/android/.kotlin/
+/android/local.properties
+/android/**/build/
+/node_modules/
+/test-results/
+**/.env
+*.jks
+*.keystore
+*.p12
