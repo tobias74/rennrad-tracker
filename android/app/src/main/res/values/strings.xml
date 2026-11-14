@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rennrad-Tracker</string>
+    <string name="imprint">Imprint</string>
+    <string name="imprint_path">/en/imprint</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_path">/en/privacy</string>
+    <string name="browser_unavailable">No web browser is available.</string>
     <string name="ready">Ready</string>
     <string name="ride_start">Start ride</string>
     <string name="ride_stop">End ride</string>

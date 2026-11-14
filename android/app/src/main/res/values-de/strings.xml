@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Rennrad-Tracker</string>
+    <string name="imprint">Impressum</string>
+    <string name="imprint_path">/impressum</string>
+    <string name="privacy_policy">Datenschutzerklärung</string>
+    <string name="privacy_policy_path">/datenschutz</string>
+    <string name="browser_unavailable">Kein Browser verfügbar.</string>
     <string name="ready">Bereit</string>
     <string name="ride_start">Fahrt starten</string>
     <string name="ride_stop">Fahrt beenden</string>
